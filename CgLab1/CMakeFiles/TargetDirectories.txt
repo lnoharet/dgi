@@ -1,0 +1,3 @@
+/home/l/n/lnoharet/Documents/dgi/CgLab1/CMakeFiles/rebuild_cache.dir
+/home/l/n/lnoharet/Documents/dgi/CgLab1/CMakeFiles/FirstLab.dir
+/home/l/n/lnoharet/Documents/dgi/CgLab1/CMakeFiles/edit_cache.dir
