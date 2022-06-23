@@ -12,11 +12,6 @@
   - Blog:
 
 ## Authors:
- Leo Noharet,    
- David Åstrand,   
- Andreas Wrife.  
-
-## Emails:
- lnoharet@kth.se,   
- dastrand@kth.se,   
- awrife@kth.se.   
+ Leo Noharet (lnoharet@kth.se),    
+ David Åstrand (dastrand@kth.se),   
+ Andreas Wrife (awrife@kth.se).  
