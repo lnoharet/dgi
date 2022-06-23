@@ -7,7 +7,8 @@
   - Lab 3 (folder CgLab3)   
 - Project: 
   - FluidSim.unitypackage
-  - FluidSimWebGL folder contains the project built for WebGL  
+  - FluidSimWebGL folder contains the project built for WebGL 
+  - Scripts: UI_handler.cs, NS_Fluid.cs    
   - Link to showcase: https://lnoharet.github.io/FluidSimWebGL/
   - Blog:
 
