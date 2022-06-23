@@ -9,7 +9,7 @@ public class NS_fluid : MonoBehaviour
     public Material smoke;
     private Texture2D smoke_texture;
 
-    static private int h = 64;
+    static private int h = 128;
     static private int w = 128;
 
     // obstacles bool matrix
@@ -81,17 +81,7 @@ public class NS_fluid : MonoBehaviour
     }
 
     public void set_obstacles(){
-        
-        /*for (int i = 0; i < w; i++){
-            for (int j=0 ; j < h ; j++ ){
-                if (i < w/4+5 && i > w/4-5 && j < h/4+5 && i > h/4-5 ){
-                    obstacles[i,j] = true;
-
-                }
-            }
-        }
-        */
-        
+            
         //Circle
         float circle_size = h/8;
 
@@ -166,8 +156,6 @@ public class NS_fluid : MonoBehaviour
 		if(Input.GetMouseButton(2)){
             clear_scene();
         }
-        //Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //Debug.Log(mousepos);
         
         dt = Time.deltaTime;
         
@@ -185,19 +173,9 @@ public class NS_fluid : MonoBehaviour
 
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100f, planemask))
-            {   
-                //Debug.Log("Test");
-                //Debug.Log(hit.point);
-
-                //Vector2 tempcoords = new Vector2((((hit.point.x + 5)*w / 10)), (((hit.point.z + 5)*h / 10)));
-                //Vector2 tempcoords = new Vector2(((hit.point.x)*w), ((hit.point.y)*h));
-                
+            {                   
                 float iii = Math.Max(h*1.0f, w/1.7f);
                 Vector2 tempcoords = new Vector2((hit.point.x/((5f*(float)w)/iii))*((float)w/2)+((float)w/2), (hit.point.y/((5f*(float)h)/iii))*((float)h/2)+((float)h/2));
-                //Vector2 tempcoords = new Vector2((hit.point.x+0.5f)*w, (hit.point.y+0.5f)*h);
-                
-                //float iii = Math.Max(h*1.0f, w/1.8f);
-                //Vector2 tempcoords = new Vector2(((hit.point.x+5f)*(float)w/iii)+0.5f, ((hit.point.y+5f)*(float)h/iii)+0.5f);
 
                 coords.x = (int) tempcoords.x;
                 coords.y = (int) tempcoords.y;
@@ -260,12 +238,13 @@ public class NS_fluid : MonoBehaviour
             prev_coords.y = -1;
         }
         if (static_source){
-            //add_static_source(1,h/2 + h/9);
-            //add_static_source(1,h/2 - h/9);
+
             add_static_source(1,h/2 - h/16);
             add_static_source(1,h/2 + h/16);
             add_static_source(1,h/2 + h/6);
             add_static_source(1,h/2 - h/6);
+            add_static_source(1,h/2 + h/3);
+            add_static_source(1,h/2 - h/3);
 
         }
 
