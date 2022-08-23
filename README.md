@@ -10,7 +10,7 @@
   - FluidSimWebGL folder contains the project built for WebGL 
   - Scripts: UI_handler.cs, NS_Fluid.cs    
   - Link to showcase: https://lnoharet.github.io/FluidSimWebGL/
-  - Blog:
+  - Blog: https://fluid-simulation-project.blogspot.com/
 
 ## Authors:
  Leo Noharet (lnoharet@kth.se),    
