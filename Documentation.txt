@@ -1,9 +1,9 @@
-Fluid Simulation on CPU.
+Fluid Simulation on CPU in Unity.
 
 The unity package containing the whole project: FluidSim.unitypackage
 To run the unity project, the unitypackage can be imported into a Unity project and load the FluidSimScene scene. Then, the Plane GameObject has to be set to the "Plane" layer. The simulation can then be run.
 
-Scripts used in the project: 
+The scripts used in the project are: 
     UI_handler.cs - contains code for the UI menu.
     NS_Fluid.cs - contains the calculations for the simulation.
     
