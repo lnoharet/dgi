@@ -9,6 +9,7 @@ The scripts used in the project are:
     
 Link to showcase: https://lnoharet.github.io/FluidSimWebGL/
 Blog: https://fluid-simulation-project.blogspot.com/
+GitHub: https://github.com/lnoharet/dgi
 
 Authors:
 Leo Noharet (lnoharet@kth.se),
