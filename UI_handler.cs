@@ -16,9 +16,7 @@ public class UI_handler : MonoBehaviour
     public Button ClearButton;
 
     // Start is called before the first frame update
-    void Start()
-    {
-
+    void Start() {
         ViscSlider.onValueChanged.AddListener(delegate {update_slider_value(1);});
         DiffSlider.onValueChanged.AddListener(delegate {update_slider_value(2);});
         ForceSlider.onValueChanged.AddListener(delegate {update_slider_value(3);});
@@ -28,16 +26,8 @@ public class UI_handler : MonoBehaviour
         ClearButton.onClick.AddListener(delegate {update_button_value(1);});
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void change_scene(){
-        
-    }
-
+    // Is called when a slider value is changed. 
+    // Param idx refers to which slider is being changed. 
     void update_slider_value(int idx){
         switch(idx){
             case 1:
@@ -57,14 +47,16 @@ public class UI_handler : MonoBehaviour
 
         }
     }
+
+    // Is called when a checkbox is checked or unchecked.
+    // Param idx refers to which toggle is being changed.
     void update_toggle_value(int idx){
         switch(idx){
-            case 1:
-                
+            case 1: // Checkbox for borders
                 fluid.borders = BorderToggle.isOn;  
                 fluid.clear_boarders();              
                 break;
-            case 2:
+            case 2: // Checkbox for Preset Scene
                 fluid.static_source = PresetToggle.isOn;
                 fluid.clear_scene();
                 if (fluid.static_source){
@@ -83,14 +75,10 @@ public class UI_handler : MonoBehaviour
 
         }
     }
+    // Is called when a button is called.
+    // Used for the Clear scene button.
     void update_button_value(int idx){
-        switch(idx){
-            case 1:
-                fluid.clear_scene();                
-                break;
-            default:
-                break;
-
-        }
+        fluid.clear_scene();                
+        
     }
 }
